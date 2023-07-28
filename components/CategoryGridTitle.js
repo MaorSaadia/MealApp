@@ -1,9 +1,13 @@
 import { View, Pressable, Text, StyleSheet } from 'react-native';
 
-function CategoryGridTitle({ title, color }) {
+function CategoryGridTitle({ title, color, onPress }) {
   return (
     <View style={[styles.gridItem, { backgroundColor: color }]}>
-      <Pressable android_ripple={{ color: '#fbfefe' }} style={styles.button}>
+      <Pressable
+        android_ripple={{ color: '#fbfefe' }}
+        style={styles.button}
+        onPress={onPress}
+      >
         <View style={[styles.innerContainer]}>
           <Text style={styles.title}>{title}</Text>
         </View>
@@ -35,7 +39,6 @@ const styles = StyleSheet.create({
     padding: 16,
     justifyContent: 'center',
     alignItems: 'center',
-    flexDirection: 'row-reverse',
   },
   title: {
     fontWeight: 'bold',
