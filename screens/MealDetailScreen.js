@@ -9,7 +9,7 @@ import IconButton from '../components/IconButton';
 function MealDetailScreen({ route, navigation }) {
   const mealId = route.params.mealId;
 
-  const selectedMeal = MEALS.find((meal) => (meal.id = mealId));
+  const selectedMeal = MEALS.find((meal) => meal.id === mealId);
 
   function headerButtonPressHandler() {}
 

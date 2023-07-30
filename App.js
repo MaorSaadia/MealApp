@@ -81,12 +81,19 @@ export default function App() {
             headerShown: false,
           }}
         />
-        <Stack.Screen name="MealsOverview" component={MealsOverviewScreen} />
+        <Stack.Screen
+          name="MealsOverview"
+          component={MealsOverviewScreen}
+          options={{
+            headerTitleAlign: 'center',
+          }}
+        />
         <Stack.Screen
           name="MealDetail"
           component={MealDetailScreen}
           options={{
             title: 'About The Meal',
+            headerTitleAlign: 'center',
           }}
         />
       </Stack.Navigator>
